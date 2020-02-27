@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(50, 169, 203, 0.4), rgba(255, 64, 251, 0.4)),
+    url("./img/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 500;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  background: rgba(255, 255, 255, .3);
+  position: fixed;
+  width: 100%;
+}
+
+.navi {
+  width: 90%;
+  margin: auto;
+}
+
+h1.title-logo {
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  color: #fff;
+}
+
+.fi-home {
+  margin-right: 10px;
+}
+
+.navi {
+  display: flex;
+}
+
+.navi-ul {
+  font-size: 1.2em;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navi-li {
+  padding: 0 10px;
+}
+
+.navi-li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main {
+  height: 100%;
+}
+
+.s-top {
+  color: #fff;
+  height: 100%;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2.sub-title {
+  font-size: 2.3em;
+  border-bottom: dotted 1px #fff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.s-profile {
+  height: 100%;
+  color: #fff;
+}
+
+.profile {
+  position: relative;
+  top: 150px;
+  width: 90%;
+  margin: auto;
+}
+
+.profile-box {
+  width: 80%;
+  margin: auto;
+}
+
+.prof-img {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
+
+/*回るアニメ*/
+.anime-1 {
+  display: inline-block;
+  animation: r1 5s linear infinite;
+  font-size: 1em;
+  margin-right: 10px;
+  font-size: .6em;
+}
+
+@keyframes r1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
