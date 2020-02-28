@@ -22,9 +22,18 @@ html {
 }
 
 .header {
-  background: rgba(255, 255, 255, .3);
-  position: fixed;
+  background: rgba(0, 0, 0, .2);
   width: 100%;
+  z-index: 9999;
+}
+
+.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background: rgba(0, 0, 0, .4);
 }
 
 .navi {
@@ -33,11 +42,18 @@ html {
 }
 
 h1.title-logo {
-  font-size: 1em;
+  font-size: 2em;
   display: flex;
   align-items: center;
   height: 80px;
   color: #fff;
+  font-family: 'Caveat', sans-serif;
+  text-decoration: none;
+}
+
+h1.title-logo a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .fi-home {
@@ -72,10 +88,19 @@ h1.title-logo {
 .s-top {
   color: #fff;
   height: 100%;
-  font-size: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.s-top-main {
+  font-size: 4em;
+  font-family: 'Caveat', sans-serif;
+}
+
+.s-top-sub {
+  font-size: 1em;
 }
 
 h2.sub-title {
@@ -84,6 +109,7 @@ h2.sub-title {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  color: #fff;
 }
 
 .s-profile {
@@ -91,11 +117,12 @@ h2.sub-title {
   color: #fff;
 }
 
-.profile {
+.box {
   position: relative;
   top: 150px;
   width: 90%;
-  margin: auto;
+  margin: 50px auto;
+  height: 100%;
 }
 
 .profile-box {
@@ -103,19 +130,137 @@ h2.sub-title {
   margin: auto;
 }
 
-.prof-img {
-  width: 50%;
-  height: 50%;
+.profile-name {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.fi-crown {
+  font-size: 8em;
+  margin-right: 20px;
+}
+
+.profile-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.fi-lightbulb {
+  font-size: 8em;
+  margin-left: 20px;
+}
+
+.profile-motto {
+  display: flex;
+  margin-top: 50px;
+}
+
+.motto {
+  font-size: 3em;
+}
+
+.s-skill {
+  color: #fff;
+}
+
+.skill-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill-box {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  margin: 20px;
+  padding: 20px;
+  background: linear-gradient(to right, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0));
+}
+
+.skill-box-nm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.star-rating {
+  position: relative;
+  width: 5em;
+  height: 1em;
+  font-size: 1.2em;
+}
+
+.star-rating-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+.star-rating-back {
+  color: #333;
+}
+
+.i-size {
+  font-size: 100px;
+  margin: 20px;
+}
+
+.i-sizem {
+  font-size: 80px;
+  margin: 10px 20px;
+}
+
+.i-bg {
   border-radius: 50%;
+  border: 1px dotted #fff;
+  background: rgba(255, 255, 255, .2);
+}
+
+.s-works {
+  color: #fff;
+}
+
+.works-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.works-box {
+  padding: 15px;
+  margin: 15px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0));
+  border-radius: 10px;
+}
+
+.works-img {
+  width: 200px;
+  height: auto;
+  margin: 20px;
+}
+
+.works-text {
+  position: relative;
 }
 
 /*回るアニメ*/
 .anime-1 {
   display: inline-block;
   animation: r1 5s linear infinite;
-  font-size: 1em;
   margin-right: 10px;
-  font-size: .6em;
+  font-size: 1.1em;
 }
 
 @keyframes r1 {
@@ -126,4 +271,52 @@ h2.sub-title {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.anime-2 {
+  animation: r2 3s linear infinite;
+}
+
+@keyframes r2 {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.anime-3 {
+  animation: r3 1s linear infinite alternate;
+}
+
+@keyframes r3 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+.slide {
+  opacity: 0;
+  transform: translate(0, 50px);
+  transition: all 1s;
+}
+
+.slide.in {
+  opacity: 1;
+  transform: translate(0, 0);
 }

@@ -3,43 +3,259 @@
 
 <head>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <title>@minao--portfolio</title>
 </head>
 
 <body>
 
-  <!-- ヘッダー -->
-  <header class="header">
-    <nav class="navi">
-      <h1 class="title-logo"><i class="fi-home"></i>minao</h1>
-      <ul class="navi-ul">
-        <li class="navi-li"><a href="#">PROFILE</a></li>
-        <li class="navi-li"><a href="#">WORKS</a></li>
-        <li class="navi-li"><a href="#">CONTACT</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <main class="main">
+
     <!-- トップ -->
     <section class="s-top">
-      Hello World
+      <p class="s-top-main">Hello World</p>
+      <p class="s-top-sub">はじめてのことば</p>
     </section>
 
-    <section class="s-profile">
-      <div class="profile">
+    <!-- ヘッダー -->
+    <header class="header">
+      <nav class="navi">
+        <h1 class="title-logo">
+          <a href="index.html"><i class="fi-home"></i>minao</a>
+        </h1>
+        <ul class="navi-ul">
+          <li class="navi-li"><a href="#profile">PROFILE</a></li>
+          <li class="navi-li"><a href="#skill">SKILL</a></li>
+          <li class="navi-li"><a href="#works">WORKS</a></li>
+          <li class="navi-li"><a href="#works">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- プロフィール -->
+    <section class="s-profile fade">
+      <div class="box" id="profile">
         <h2 class="sub-title"><i class="fi-star anime-1"></i>PROFILE</h2>
         <div class="profile-box">
-          <img src="img/prof.jpg" class="prof-img">
-          <p>testほげーてすとほげー</p>
+          <div class="profile-name slide">
+            <i class="fi-crown anime-2"></i>
+            <p>
+              name: minao<br>
+              birthday: 199*/4/2<br>
+              love: alcohol(^~^)♡
+            </p>
+          </div>
+          <div class="profile-text slide">
+            <p>
+              芸能系、アパレル、化粧品販売、営業、、<br>
+              いろいろな経験を経てエンジニアなりました。<br>
+              バックエンドメインからフロントエンジニア目指し、<br>
+              現在はHTML/CSS/JSをメインに自己学習にはげんでます。
+            </p>
+            <i class="fi-lightbulb anime-3"></i>
+          </div>
+          <div class="profile-motto slide">
+            <p class="motto">「人生一度きり」</p><br>
+            この言葉を胸に、毎日楽しく生きています(^o^)
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- スキル -->
+    <section class="s-skill fade">
+      <div class="box" id="skill">
+        <h2 class="sub-title"><i class="fi-star anime-1"></i>SKILL</h2>
+        <div class="skill-list">
+
+          <!-- js -->
+          <div class="skill-box slide">
+            <div class="skill-box-nm">
+              <i class="devicons devicons-javascript i-size i-bg"></i>
+              <h3>JavaScript</h3>
+              <div class="star-rating">
+                <div class="star-rating-front" style="width: 60%">★★★★★</div>
+                <div class="star-rating-back">★★★★★</div>
+              </div>
+            </div>
+            <div class="skill-text">
+              フロントエンジニアを目指し自己学習してます。<br>
+              フレームワークはjQuery/Vueをさわりました。<br>
+              CSSとあわせてjQueryで動きをつけるのが好きです(^~^)♡<br>
+              Javaで入ってるので自由度が高くてびっくりでした。<br>
+              次はReactさわってみたいなと思っています！
+            </div>
+          </div>
+
+          <!-- java -->
+          <div class="skill-box slide">
+            <div class="skill-box-nm">
+              <i class="devicons devicons-java i-size i-bg"></i>
+              <h3>Java</h3>
+              <div class="star-rating">
+                <div class="star-rating-front" style="width: 50%">★★★★★</div>
+                <div class="star-rating-back">★★★★★</div>
+              </div>
+            </div>
+            <div class="skill-text">
+              業務で一年半くらいつかいました。コードを眺める作業！<br>
+              最近はJSメインなので誠実さが身に沁みますね。<br>
+              研修期間はJavaで勤怠表作ってみたりしてました。<br>
+              JUnitでテストがメイン。JUnit好きです。<br>
+              業務で触るのはテストコードでしたね(;3;)
+            </div>
+          </div>
+
+          <!-- html,css -->
+          <div class="skill-box slide">
+            <div class="skill-box-nm">
+              <i class="devicons devicons-html5 i-sizem i-bg"></i>
+              <i class="devicons devicons-css3 i-sizem i-bg"></i>
+              <h3>HTML/CSS</h3>
+              <div class="star-rating s-iti">
+                <div class="star-rating-front" style="width: 70%">★★★★★</div>
+                <div class="star-rating-back">★★★★★</div>
+              </div>
+            </div>
+            <div class="skill-text">
+              触ってて一番たのしいのがHTML&CSSでした！<br>
+              ブログ改造したり、趣味のwebページ作ったり、<br>
+              むかーしからHTMLやCSSは趣味レベルで触っていました！<br>
+              HTMLで骨組みを作って、CSSで色をつける。好き。<br>
+              JSも覚えて動きをつけると達成感にあふれますね！(*^~^*)
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ワーク -->
+    <section class="s-works fade">
+      <div class="box" id="works">
+        <h2 class="sub-title"><i class="fi-star anime-1"></i>WORKS</h2>
+
+        <!-- work1 -->
+        <div class="works-list">
+          <div class="works-box slide">
+            <h4>No.1 WebPage</h3>
+              <img src="img/work1.png" class="works-img">
+              <div class="works-text-l">
+                HTML/CSS/JSを学ぼう！<br>
+                初めて作成したWebページでWebページの基礎を学びました。
+                HTMLの書き方、CSSの使い方、JSの使い方、レスポンシブの存在などなど。
+                まずは知ることが大事だということを学びました。<br><br>
+
+                制作時期：2019/12～2020/1<br>
+                制作期間：約45時間<br>
+                エディタ：brackets<br>
+                使用言語：HTML/CSS/jQuery<br>
+                レスポンシブ対応：有<br>
+              </div>
+          </div>
+
+          <!-- work2 -->
+          <div class="works-box slide">
+            <h3>No.2 TodoList</h3>
+            <img src="img/work2.png" class="works-img">
+            <div class="works-text-r">
+              JSのフレームワークを使ってみよう！<br>
+              jQueryはわかってきたが他のフレームワークはどうなんだろう？
+              Vue使いに教えてもらいながらプチアプリ作成しました。
+              削除、追加、検索、完了の機能を動的に制御する難しさや、
+              templateなどHTMLとは違った書き方をはじめて学びました。
+              すこーしだけBootStrapにも触ってみました。<br><br>
+
+              制作時期：2019/11～2019/12<br>
+              制作期間：約60時間<br>
+              エディタ：brackets/ATOM<br>
+              使用言語：Vue.js/CSS<br>
+              レスポンシブ対応：無<br>
+            </div>
+          </div>
+
+          <!-- work3 -->
+          <div class="works-box slide">
+            <h3>No3. PortFoilo</h3>
+            <img src="img/work3.png" class="works-img">
+            <div class="works-text-r">
+              HTML/CSS/JSもわかってきたから再度Webページ作成！<br>
+              基礎をかため、アニメーションも知ったところで今度こそ魅せれるポートフォリオを作成してみました。
+              JSで動きを制御したり、CSSでかっこよくしてみたり。書いててとても楽しかったです！
+              動きの制御には苦労しましたが、No1と比べてここまでできるようになったんだと少し感動しました(^~^)<br><br>
+
+              制作時期：2019/11～2019/12<br>
+              制作期間：約60時間<br>
+              エディタ：brackets/ATOM<br>
+              使用言語：HTML/CSS/jQuery<br>
+              レスポンシブ対応：無<br>
+            </div>
+          </div>
+
+          <!-- work4 -->
+          <div class="works-box slide">
+            <h3>No.4 WordPress</h3>
+            <img src="img/work4.png" class="works-img">
+            <div class="works-text-r">
+              ワードプレスを触ってみよう！！<br>
+              フロントだとワードプレスを触ることも多く、PHPも理解しないとねーとアドバイスを受け勉強。
+              テーマは「Simplify」を使用してます。シンプルな作りからカスタマイズ。
+              サーバ上でカスタマイズしているので、いつかローカル環境に作成したいと思っています。
+              PHPもあんまり触れていないので今後はもっと勉強していきたいな。<br><br>
+
+              制作時期：臨時更新
+            </div>
+          </div>
+
+          <!-- work5 -->
+          <div class="works-box slide">
+            <h3>No.5 TodoList-JS</h3>
+            <img src="img/work5.png" class="works-img">
+            <div class="works-text-r">
+              素のJavaScriptを勉強しよう！<br>
+              思い返してみればフレームワークオンリーなJSの知識。
+              jQuery、Vueは触ったけど肝心な素のJavaScriptをあまり知らない。
+              Vueだとあぁ作っていたけど、素のJSのみだとどうなるんだろう？
+              ということで素のJSを使用してTodoListを作成してみました。
+              ローカルストレージに内容も保存してみました。とても苦戦しました。
+              フレームワークはclassをとったり、アニメーションをつけたり、
+              関数の書き方がとても楽になるんだなと学びました。。<br><br>
+
+              制作時期：2020/2<br>
+              制作期間：約40時間<br>
+              エディタ：ATOM<br>
+              使用言語：HTML/CSS/JavaScript<br>
+              レスポンシブ対応：無<br>
+            </div>
+          </div>
+
+          <!-- work6 -->
+          <div class="works-box slide">
+            <h3>No.6 PortFolio-part2</h3>
+            <img src="img/work6.png" class="works-img">
+            <div class="works-text-r">
+              素のJSを勉強したからもう一度Webページを作ろう！<br>
+              No5を作成して素のJSとフレームワークの違いがとてもわかってきた。
+              jQueryのこの処理はJSだとこういう処理が行われているのか・・など。
+              見えてきた部分の復習を兼ねて、新たなWebページを作成しました！
+              No3と雰囲気が似てしまったのですが、
+              CDNを使ったフォントアイコンがとっても好きになりました。<br><br>
+
+              制作時期：2020/2<br>
+              制作期間：約30時間<br>
+              エディタ：ATOM<br>
+              使用言語：HTML/CSS/jQuery<br>
+              レスポンシブ対応：有<br>
+            </div>
+          </div>
+        </div>
+    </section>
   </main>
-  </header>
+  <script src="main.js" type="text/javascript"></script>
 </body>
 
 </html>
